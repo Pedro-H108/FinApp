@@ -8,26 +8,29 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class Cadastro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_cadastro)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val buttonSair = findViewById<Button>(R.id.buttonSair)
-        buttonSair.setOnClickListener {
-            finishAffinity()
+        val buttonCadastrar = findViewById<Button>(R.id.buttonCadastrar)
+        buttonCadastrar.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // opcional, remove esta tela da pilha
         }
 
-        val buttonCadastro = findViewById<Button>(R.id.buttonCadastro)
-        buttonCadastro.setOnClickListener {
-            val intent = Intent(this, Cadastro::class.java)
+        val buttonVoltar = findViewById<Button>(R.id.buttonVoltar)
+        buttonVoltar.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish() // opcional
         }
     }
 }
