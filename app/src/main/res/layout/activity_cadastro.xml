@@ -5,10 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="36sp"
+    android:layout_margin="32sp"
+    android:padding="24dp"
     tools:context=".Cadastro">
 
-    <!-- Descrição da transação -->
+    <!-- Título -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -19,30 +20,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Valor da transação -->
+    <!-- Campo Descrição -->
     <EditText
         android:id="@+id/editDescricao"
-        android:layout_width="307dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:hint="Descrição"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
 
+    <!-- Campo Valor -->
     <EditText
         android:id="@+id/editValor"
-        android:layout_width="307dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:hint="Valor"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editDescricao" />
+        app:layout_constraintTop_toBottomOf="@id/editDescricao" />
 
-    <!-- Classificação: Crédito ou Débito -->
+    <!-- Grupo de botões Crédito/Débito -->
     <RadioGroup
         android:id="@+id/radioGroupTipo"
         android:layout_width="wrap_content"
@@ -51,19 +55,21 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editValor">
+        app:layout_constraintTop_toBottomOf="@id/editValor">
 
         <RadioButton
             android:id="@+id/radioDebito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Débito" />
+            android:text="Débito"
+            android:textSize="26sp" />
 
         <RadioButton
             android:id="@+id/radioCredito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Crédito" />
+            android:text="Crédito"
+            android:textSize="26sp" />
     </RadioGroup>
 
     <!-- Botão Cadastrar -->
@@ -71,10 +77,10 @@
         android:id="@+id/buttonCadastrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:minHeight="48dp"
         android:text="Cadastrar"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/radioGroupTipo" />
@@ -84,10 +90,10 @@
         android:id="@+id/buttonVoltar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:minHeight="48dp"
         android:text="Voltar"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonCadastrar" />

@@ -23,14 +23,14 @@ class Cadastro : AppCompatActivity() {
         buttonCadastrar.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // opcional, remove esta tela da pilha
+            finish()
         }
 
         val buttonVoltar = findViewById<Button>(R.id.buttonVoltar)
         buttonVoltar.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // opcional
+            finish()
         }
     }
 }
