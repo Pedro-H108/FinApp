@@ -29,5 +29,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Cadastro::class.java)
             startActivity(intent)
         }
+
+        val buttonExtrato = findViewById<Button>(R.id.buttonExtrato)
+        buttonExtrato.setOnClickListener {
+            val intent = Intent(this, Extrato::class.java)
+            startActivity(intent)
+        }
     }
 }
