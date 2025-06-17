@@ -26,6 +26,11 @@ class Extrato : AppCompatActivity() {
         radioFiltro.setOnCheckedChangeListener { _, _ ->
             exibirTransacoesFiltradas()
         }
+
+        val buttonVoltar = findViewById<Button>(R.id.buttonVoltar)
+        buttonVoltar.setOnClickListener {
+            finish()
+        }
     }
 
     private fun carregarTransacoes() {
@@ -54,4 +59,6 @@ class Extrato : AppCompatActivity() {
 
         textSaldo.text = "Saldo: R$ %.2f".format(saldo)
     }
+
+
 }

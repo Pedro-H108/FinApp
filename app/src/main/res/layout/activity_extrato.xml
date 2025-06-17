@@ -3,6 +3,7 @@
     android:id="@+id/layoutExtrato"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="32sp"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -10,10 +11,10 @@
         android:id="@+id/textTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Extrato"
-        android:textSize="32sp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:text="Extrato"
+        android:textSize="32sp" />
 
     <RadioGroup
         android:id="@+id/radioFiltro"
@@ -25,20 +26,20 @@
             android:id="@+id/radioTodos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Todos"
-            android:checked="true"/>
+            android:checked="true"
+            android:text="Todos" />
 
         <RadioButton
             android:id="@+id/radioCreditos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Créditos"/>
+            android:text="Créditos" />
 
         <RadioButton
             android:id="@+id/radioDebitos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Débitos"/>
+            android:text="Débitos" />
     </RadioGroup>
 
     <ListView
@@ -53,9 +54,18 @@
         android:id="@+id/textSaldo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
         android:text="Saldo: R$ 0,00"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginTop="12dp"/>
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Voltar"
+        android:textSize="24sp" />
 </LinearLayout>

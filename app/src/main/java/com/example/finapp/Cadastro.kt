@@ -68,7 +68,7 @@ class Cadastro : AppCompatActivity() {
         }
 
         buttonVoltar.setOnClickListener {
-            finish() // Apenas finaliza a activity, voltando à anterior
+            finish()
         }
     }
 }
